@@ -12,8 +12,8 @@ export default React.createClass({
 
     return (
       <div >
-        <TokenForm onSubmit={this.addWorkspace}>Take Workspace</TokenForm>
         <Workspace name={name} projects={projects}/>
+        <TokenForm onSubmit={this.addWorkspace}>Take Workspace</TokenForm>
       </div>
     );
   },
