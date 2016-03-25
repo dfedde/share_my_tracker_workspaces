@@ -4,16 +4,27 @@ import Store from "../store";
 export default React.createClass({
 
   render: function() {
-    styles={
+    let styles={
       button: {
         display: 'inline-block',
-        paddingLeft: 5
+        marginLeft: '5px',
+        backgroundColor: '#4CAF50',
+        border: 'none',
+        color: 'white',
+        padding: '5px 10px',
+        textAlign: 'center',
+        textDecoration: 'none',
+        display: 'inline-block',
+        fontSize: '16px'
+      },
+      input: {
+        width: '300px'
       }
     }
 
     return (
       <div >
-      <input type='text'/>
+      <input onstyle={styles.input}type='text'/>
       <div style={styles.button}>load my workspaces</div>
       </div>
     );
