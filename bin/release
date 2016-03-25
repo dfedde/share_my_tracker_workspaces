@@ -4,10 +4,15 @@ function git_dirty {
   [[ $(git diff --shortstat 2> /dev/null | tail -n1) != "" ]] && echo "*"
 }
 
+webpack
+
 if(git_dirty) then
   echo 'make sure git is clean'
   exit 127
 fi
 
 git checkout gh-pages
-git checkout master dist/*
+
+cp dist/* ./
+
+git checkout -
