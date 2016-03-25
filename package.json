@@ -9,7 +9,7 @@
   },
   "scripts": {
     "start": "webpack-dev-server --hot --inline",
-    "build": "webpack --progress --colors"
+    "compile": "webpack --progress --colors",
   },
   "main": "lib/foo.js",
   "repository": {

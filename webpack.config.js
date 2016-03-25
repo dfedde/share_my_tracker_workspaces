@@ -5,7 +5,7 @@ module.exports = {
     html: './index.html'
   },
   output: {
-    path: __dirname,
+    path: __dirname + '/dist',
     filename: "app.js"
   },
   module: {
