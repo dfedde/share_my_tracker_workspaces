@@ -2,6 +2,9 @@ import React from "react";
 import Store from "../store";
 
 export default React.createClass({
+  getInitialState: function(){
+    return {token: ''}
+  },
 
   render: function() {
     let styles={
@@ -17,16 +20,25 @@ export default React.createClass({
         display: 'inline-block',
         fontSize: '16px'
       },
+
       input: {
-        width: '300px'
+        width: '500px'
       }
-    }
+    };
 
     return (
       <div >
-      <input onstyle={styles.input}type='text'/>
-      <div style={styles.button}>load my workspaces</div>
+      <input onChange={this.handleInput} style={styles.input} type='text'/>
+      <div onClick={this.handleSubmit} style={styles.button}>{this.props.children}</div>
       </div>
     );
+  },
+
+  handleSubmit: function(){
+    this.props.onSubmit(this.state.token);
+  },
+
+  handleInput: function(e){
+    this.setState({token: e.target.value});
   },
 });
