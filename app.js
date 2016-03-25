@@ -20562,12 +20562,12 @@
 	    return _react2.default.createElement(
 	      "div",
 	      null,
+	      _react2.default.createElement(_workspace2.default, { name: name, projects: projects }),
 	      _react2.default.createElement(
 	        _token_input2.default,
 	        { onSubmit: this.addWorkspace },
 	        "Take Workspace"
-	      ),
-	      _react2.default.createElement(_workspace2.default, { name: name, projects: projects })
+	      )
 	    );
 	  },
 
